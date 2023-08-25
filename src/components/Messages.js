@@ -9,9 +9,7 @@ const Messages = ({ messages, handleDeleteMessage }) => {
 
   const currentPageNumber = pageNumber * postNumber - postNumber;
 
-  const paginatedPost = [...messages]
-    .reverse()
-    .splice(currentPageNumber, postNumber);
+  const paginatedPost = [...messages].splice(currentPageNumber, postNumber);
 
   const getTime = (timeStamp) => {
     return `-${new Date(timeStamp).toLocaleTimeString("en-US", {

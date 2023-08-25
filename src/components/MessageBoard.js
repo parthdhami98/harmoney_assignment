@@ -90,6 +90,14 @@ const MessageBoard = () => {
     });
   };
 
+  const handleSortMessages = () => {
+    const sortMessages = [...messages].sort((a, b) => {
+      return new Date(b.timestamp) - new Date(a.timestamp);
+    });
+
+    setMessages(sortMessages);
+  };
+
   return (
     <section className="container">
       <h1>Chatter</h1>
@@ -105,6 +113,9 @@ const MessageBoard = () => {
         </button>
         <button className="deleteCta" onClick={() => setShowModal(true)}>
           Delete All
+        </button>
+        <button className="postCta" onClick={handleSortMessages}>
+          Sort By Latest post
         </button>
       </div>
 
