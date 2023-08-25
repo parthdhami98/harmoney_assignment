@@ -115,7 +115,7 @@ const MessageBoard = () => {
           Delete All
         </button>
         <button className="postCta" onClick={handleSortMessages}>
-          Sort By Latest post
+          Sort By Latest message
         </button>
       </div>
 
